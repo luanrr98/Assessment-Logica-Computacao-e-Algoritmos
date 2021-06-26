@@ -15,7 +15,7 @@ def calcular_rendimento(montante_inicial,rendimento_periodo,aporte_periodo,total
 
 #Letra b, grafico
 def grafico(montante_meses, valor_acumulado):
-    plt.plot(valor_acumulado, montante_meses)
+    plt.plot(montante_meses, valor_acumulado)
     plt.show()
 
 
