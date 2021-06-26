@@ -9,7 +9,7 @@ def calcular_rendimento(montante_inicial,rendimento_periodo,aporte_periodo,total
         montante_inicial = montante_inicial+valor_rendimento
         montante_inicial = montante_inicial+aporte_periodo
         print(f"Após {i+1} periodo(s), o montante será de R${montante_inicial:.2f}.")
-        montante_meses.append(i)
+        montante_meses.append(i+1)
         valor_acumulado.append(montante_inicial)
     return montante_meses, valor_acumulado
 
