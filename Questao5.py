@@ -29,15 +29,15 @@ def mostrar_pib_pais(pais, ano): #Função para mostrar o PIB do pais e anos sel
 
 def estimativa_variacao ():# Função para estimar a variação do PIB
     cabecalho_paises, ano_pib, cabecalho_anos= extrair_dados('Assessment_PIBs - modelo 2.csv')
-    j=0
+    j=1
     for i in cabecalho_paises[1:]:
-        valor = ano_pib[0][j+1]
-        valor2= ano_pib[7][j+1]
+        valor = ano_pib[0][j]
+        valor2= ano_pib[7][j]
         j= j+1
         valor = float(valor)
         valor2 = float(valor2)
         variacao = (valor2/valor-1)*100
-        print(f"\n{i}         Variação de {variacao:.2f}% entre 2013 e 2020.")
+        print(f"{i}         Variação de {variacao:.2f}% entre 2013 e 2020.")
 
 
 def mostrar_grafico(pais): #Função para mostrar o gráfico do PIB
@@ -66,8 +66,6 @@ elif resposta == "2":
 elif resposta == "3":
     pais = input("\nDigite o nome do país: ")
     mostrar_grafico(pais)
-
-
 
 else:
     print("Opção Inválida")
