@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 def extrair_dados (pib):  #Extração e organização dos dados.
     cabecalho_anos = []
-    with open('Assessment_PIBs - modelo 2.csv', 'r') as arquivo:
+    with open(pib, 'r') as arquivo:
         conteudo_arquivo= arquivo.read()
     ano_pib = []
     conteudo_arquivo = conteudo_arquivo.splitlines()
