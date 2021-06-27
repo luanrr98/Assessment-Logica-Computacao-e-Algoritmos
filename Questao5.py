@@ -11,8 +11,10 @@ def extrair_dados (pib):  #Extração e organização dos dados.
     for indice in conteudo_arquivo:
         indice = indice.split(",")
         ano_pib.append(indice)
-    for i in range(8):
+    tamanho_ano_pib= len(ano_pib)
+    for i in range(tamanho_ano_pib):
         cabecalho_anos.append(ano_pib[i][0])
+
     return cabecalho_paises, ano_pib, cabecalho_anos
 
 def mostrar_pib_pais(pais, ano): #Função para mostrar o PIB do pais e anos selecionados
@@ -48,7 +50,8 @@ def mostrar_grafico(pais): #Função para mostrar o gráfico do PIB
         exit()
     lista_pibs = []
     indice_pais = cabecalho_paises.index(pais)
-    for i in range(8):
+    tamanho_ano_pib= len(ano_pib)
+    for i in range(tamanho_ano_pib):
         lista_pibs.append(float(ano_pib[i][indice_pais]))
     plt.title(pais)
     plt.xlabel("Anos")
