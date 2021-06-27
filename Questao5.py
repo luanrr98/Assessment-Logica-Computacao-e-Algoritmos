@@ -37,7 +37,8 @@ def estimativa_variacao ():# Função para estimar a variação do PIB
         valor = float(valor)
         valor2 = float(valor2)
         variacao = (valor2/valor-1)*100
-        print(f"{i}         Variação de {variacao:.2f}% entre 2013 e 2020.")
+        escrita = f"Variação de {variacao:.2f}% entre 2013 e 2020"
+        print(i.ljust(30)+escrita.center(30))
 
 
 def mostrar_grafico(pais): #Função para mostrar o gráfico do PIB
