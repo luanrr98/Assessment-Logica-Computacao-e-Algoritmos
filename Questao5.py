@@ -42,6 +42,9 @@ def estimativa_variacao ():# Função para estimar a variação do PIB
 
 def mostrar_grafico(pais): #Função para mostrar o gráfico do PIB
     cabecalho_paises, ano_pib, cabecalho_anos = extrair_dados('Assessment_PIBs - modelo 2.csv')
+    if pais not in cabecalho_paises:
+        print("País Inválido!!")
+        exit()
     lista_pibs = []
     indice_pais = cabecalho_paises.index(pais)
     for i in range(8):
@@ -54,16 +57,16 @@ def mostrar_grafico(pais): #Função para mostrar o gráfico do PIB
     
 
 #Selecionar a opção de qual função usar.
-resposta = input("Digite a opção desejada:\n 1- Mostrar PIB de um pais de um ano selecionado;\n 2- Listar estimativa da variação do PIB dos paises,\n 3- Mostrar gráfico da evolução do PIB de uma país selecionado.\n Digite sua escolha (1, 2 ou 3): ")
-if resposta == "1":
+resposta = input("Digite a opção desejada:\n 1- Mostrar PIB de um pais de um ano selecionado;\n 2- Listar estimativa da variação do PIB dos paises;\n 3- Mostrar gráfico da evolução do PIB de uma país selecionado.\n Digite sua escolha (1, 2 ou 3): ")
+if resposta == "1":    #LETRA A
     pais = input("\nInforme um país: " )
     ano = input("Informer um ano entre 2013 e 2020: ")
     mostrar_pib_pais(pais,ano)
 
-elif resposta == "2":
+elif resposta == "2":    #LETRA B
     estimativa_variacao()
 
-elif resposta == "3":
+elif resposta == "3":    #LETRA C
     pais = input("\nDigite o nome do país: ")
     mostrar_grafico(pais)
 

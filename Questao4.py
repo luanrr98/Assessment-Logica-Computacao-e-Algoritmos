@@ -15,6 +15,10 @@ def calcular_rendimento(montante_inicial,rendimento_periodo,aporte_periodo,total
 
 #Letra b, grafico
 def grafico(montante_meses, valor_acumulado):
+    plt.title("Mágica dos juros compostos")
+    plt.xlabel("Meses")
+    plt.ylabel("Valor acumulado")
+
     plt.plot(montante_meses, valor_acumulado)
     plt.show()
 
